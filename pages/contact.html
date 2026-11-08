@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umber & Rose - Contact us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <!-- header and navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav-logo">Umber &amp; Rose</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact us</a></li>
+                </ul>
+                <!-- close btn -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- search btn -->
+                <button class="icon-btn" id="search-btn" aria-label="Search"><i class="ri-search-line"></i></button>
+
+                <!-- cart btn with the number -->
+                <button class="icon-btn" id="cart-btn" aria-label="Open cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <div class="nav-toggle icon-btn" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- search bar -->
+    <div class="search" id="search-box">
+        <div class="container">
+            <form class="search-form" id="search-form">
+                <input type="search" id="search-input" placeholder="Search bags, watches, headphones..." aria-label="Search products">
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- cart -->
+    <aside class="cart" id="cart" aria-label="Shopping cart">
+        <div class="cart-head">
+            <h2>Your cart</h2>
+            <button id="cart-close" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-foot">
+            <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+            <button class="btn" id="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Let's talk.</h1>
+                <p>Questions about an order, a gift idea or a repair? Write to us and a real person will answer.</p>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="contact-grid">
+                <div class="info-list">
+                    <div class="info-card">
+                        <i class="ri-map-pin-line"></i>
+                        <div><h3>Our shop</h3><p>12 Rosewood Street, Berlin</p></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-mail-line"></i>
+                        <div><h3>Email</h3><p>hello@umberandrose.com</p></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-phone-line"></i>
+                        <div><h3>Phone</h3><p>+49 30 123 4567</p></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-time-line"></i>
+                        <div><h3>Opening hours</h3><p>Monday to Saturday, 10:00 to 18:00</p></div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <h2>Send us a message</h2>
+
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" placeholder="Elham">
+                        <p class="error-text"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" placeholder="name@mail.com">
+                        <p class="error-text"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="topic">What is it about?</label>
+                        <select id="topic">
+                            <option>My order</option>
+                            <option>A product question</option>
+                            <option>Repair or return</option>
+                            <option>Something else</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Write your message here..."></textarea>
+                        <p class="error-text"></p>
+                    </div>
+
+                    <button class="btn" type="submit">Send message</button>
+                    <p class="success" id="success"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section container faq" id="faq">
+            <div class="section-head">
+                <h2>Quick answers</h2>
+            </div>
+            <details>
+                <summary>How long does shipping take?</summary>
+                <p>Most orders arrive in 3 to 7 working days.</p>
+            </details>
+            <details>
+                <summary>Can I return something?</summary>
+                <p>Yes. You have 30 days to return an unused item in its box.</p>
+            </details>
+            <details>
+                <summary>Do you repair old bags?</summary>
+                <p>Yes, for free in the first year, and at a small cost after that.</p>
+            </details>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our materials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get help</h3>
+                <ul>
+                    <li><a href="contact.html#faq">Questions</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Online shop</h3>
+                <ul>
+                    <li><a href="home.html?search=bags#products">Bags</a></li>
+                    <li><a href="home.html?search=accessories#products">Accessories</a></li>
+                    <li><a href="home.html#colors">Sneakers</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow us</h3>
+                <p>New pieces and stories, every week.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Umber &amp; Rose. All rights reserved.</div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

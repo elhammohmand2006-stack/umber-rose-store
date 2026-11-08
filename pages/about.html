@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umber & Rose - About</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <!-- header and navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav-logo">Umber &amp; Rose</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+                </ul>
+                <!-- close btn -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- search btn -->
+                <button class="icon-btn" id="search-btn" aria-label="Search"><i class="ri-search-line"></i></button>
+
+                <!-- cart btn with the number -->
+                <button class="icon-btn" id="cart-btn" aria-label="Open cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <div class="nav-toggle icon-btn" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- search bar -->
+    <div class="search" id="search-box">
+        <div class="container">
+            <form class="search-form" id="search-form">
+                <input type="search" id="search-input" placeholder="Search bags, watches, headphones..." aria-label="Search products">
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- cart -->
+    <aside class="cart" id="cart" aria-label="Shopping cart">
+        <div class="cart-head">
+            <h2>Your cart</h2>
+            <button id="cart-close" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-foot">
+            <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+            <button class="btn" id="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="about-hero">
+            <div class="container about-hero-grid">
+                <div>
+                    <h1>Made slowly. Made to stay.</h1>
+                    <p>We make bags and accessories from warm materials and simple shapes, so they look good today and still look good in ten years.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Inside our shop">
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="story-grid">
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80" alt="Our workshop">
+                <div>
+                    <h2>How it started</h2>
+                    <p>Umber &amp; Rose began on one small table, with one bag and a big question: why do we throw away things that could last?</p>
+                    <p>We chose leather that ages well, colors taken from clay and flowers, and makers who are paid fairly. Every piece goes through the hands of people who care about it.</p>
+                    <a href="home.html#products" class="btn">See the collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="numbers">
+            <div class="container numbers-grid">
+                <div><strong>12k+</strong><span>Happy customers</span></div>
+                <div><strong>40</strong><span>Countries we ship to</span></div>
+                <div><strong>8</strong><span>Years of making</span></div>
+                <div><strong>100%</strong><span>Recycled packaging</span></div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-head">
+                <h2>What we believe</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value">
+                    <i class="ri-leaf-line"></i>
+                    <h3>Kind to the planet</h3>
+                    <p>Natural materials, recycled boxes and no extra plastic.</p>
+                </div>
+                <div class="value">
+                    <i class="ri-heart-3-line"></i>
+                    <h3>Fair to people</h3>
+                    <p>Our makers get fair pay and safe, bright workplaces.</p>
+                </div>
+                <div class="value">
+                    <i class="ri-time-line"></i>
+                    <h3>Built to last</h3>
+                    <p>Strong stitching and a repair service for every bag we sell.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section steps">
+            <div class="container">
+                <div class="section-head">
+                    <h2>From idea to your door</h2>
+                </div>
+                <div class="steps-list">
+                    <div class="step"><b>1</b><h3>Design</h3><p>We sketch, test shapes and choose colors from our palette of rose and umber.</p></div>
+                    <div class="step"><b>2</b><h3>Make</h3><p>Small teams cut, sew and finish each piece by hand.</p></div>
+                    <div class="step"><b>3</b><h3>Deliver</h3><p>We pack it in recycled paper and send it to you in 3 to 7 days.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-head">
+                <h2>The people behind it</h2>
+                <p>A small team that answers every message personally.</p>
+            </div>
+            <div class="team-grid">
+                <div class="member"><div class="avatar">LA</div><h3>Laila Ahmadi</h3><p>Founder and designer</p></div>
+                <div class="member"><div class="avatar">SK</div><h3>Sami Karimi</h3><p>Head of leather work</p></div>
+                <div class="member"><div class="avatar">MR</div><h3>Mina Rahimi</h3><p>Customer care</p></div>
+                <div class="member"><div class="avatar">AN</div><h3>Arman Nazari</h3><p>Shipping and packing</p></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our materials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get help</h3>
+                <ul>
+                    <li><a href="contact.html#faq">Questions</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Online shop</h3>
+                <ul>
+                    <li><a href="home.html?search=bags#products">Bags</a></li>
+                    <li><a href="home.html?search=accessories#products">Accessories</a></li>
+                    <li><a href="home.html#colors">Sneakers</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow us</h3>
+                <p>New pieces and stories, every week.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Umber &amp; Rose. All rights reserved.</div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

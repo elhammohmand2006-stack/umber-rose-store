@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umber & Rose - Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <!-- header and navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav-logo">Umber &amp; Rose</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+                </ul>
+                <!-- close btn -->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- search btn -->
+                <button class="icon-btn" id="search-btn" aria-label="Search"><i class="ri-search-line"></i></button>
+
+                <!-- cart btn with the number -->
+                <button class="icon-btn" id="cart-btn" aria-label="Open cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <div class="nav-toggle icon-btn" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- search bar -->
+    <div class="search" id="search-box">
+        <div class="container">
+            <form class="search-form" id="search-form">
+                <input type="search" id="search-input" placeholder="Search bags, watches, headphones..." aria-label="Search products">
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- cart -->
+    <aside class="cart" id="cart" aria-label="Shopping cart">
+        <div class="cart-head">
+            <h2>Your cart</h2>
+            <button id="cart-close" aria-label="Close cart"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-foot">
+            <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+            <button class="btn" id="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <!-- 1. hero slider -->
+        <section class="hero" id="hero">
+            <div id="hero-slides"></div>
+            <div class="hero-controls">
+                <button class="arrow" id="hero-prev" aria-label="Previous slide"><i class="ri-arrow-left-line"></i></button>
+                <div class="dots" id="hero-dots"></div>
+                <button class="arrow" id="hero-next" aria-label="Next slide"><i class="ri-arrow-right-line"></i></button>
+            </div>
+        </section>
+
+        <!-- 2. products -->
+        <section class="section container" id="products">
+            <div class="section-head">
+                <h2 id="products-title">Pieces we love right now</h2>
+                <p>Bags and accessories made to be used every day. Add them to your cart with one click.</p>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+        </section>
+
+        <!-- 3. colors slider -->
+        <section class="section colors" id="colors">
+            <div class="container">
+                <div class="section-head">
+                    <h2>One sneaker, four colors</h2>
+                    <p>Same soft sole and same easy fit. Pick the color that feels like you.</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-img">
+                        <img id="color-img" src="" alt="">
+                        <button class="arrow color-prev" id="color-prev" aria-label="Previous color"><i class="ri-arrow-left-s-line"></i></button>
+                        <button class="arrow color-next" id="color-next" aria-label="Next color"><i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+                    <div class="color-info">
+                        <h3 id="color-name">Cherry</h3>
+                        <p class="price" id="color-price">$120.00</p>
+                        <div class="swatches" id="swatches"></div>
+                        <button class="btn btn-light" id="color-add" data-add="101">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- product details window -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close" aria-label="Close"><i class="ri-close-line"></i></button>
+            <img id="modal-img" src="" alt="">
+            <div class="modal-text">
+                <h3 id="modal-name"></h3>
+                <p class="price" id="modal-price"></p>
+                <p id="modal-text"></p>
+                <button class="btn" id="modal-add" data-add="1">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our materials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get help</h3>
+                <ul>
+                    <li><a href="contact.html#faq">Questions</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Online shop</h3>
+                <ul>
+                    <li><a href="home.html?search=bags#products">Bags</a></li>
+                    <li><a href="home.html?search=accessories#products">Accessories</a></li>
+                    <li><a href="home.html#colors">Sneakers</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow us</h3>
+                <p>New pieces and stories, every week.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Umber &amp; Rose. All rights reserved.</div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
